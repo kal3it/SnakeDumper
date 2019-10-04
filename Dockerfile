@@ -18,4 +18,4 @@ COPY --from=builder /app /app
 RUN echo 'php /app/bin/snakedumper $@' > /bin/snakedumper
 RUN chmod +x /bin/snakedumper
 
-ENTRYPOINT ["php", "/app/bin/snakedumper"]
+CMD ["snakedumper"]
